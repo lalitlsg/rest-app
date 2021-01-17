@@ -10,6 +10,10 @@ app.use(cors());
 app.use(express.json());
 app.use(studentRouter);
 
+app.get("/", (req, res) => {
+  res.send("NodeJS App");
+});
+
 app.listen(port, () => {
   console.log(`App Running At ${port}`);
 });
